@@ -1,6 +1,4 @@
-# `~/.pi/agent/` — pi.dev Agent Workspace
-
-User-global pi configuration. Agents, prompts, skills, and chains for the `pi` CLI.
+My pi agnet config
 
 ## Layout
 
@@ -15,7 +13,12 @@ User-global pi configuration. Agents, prompts, skills, and chains for the `pi` C
 └── extensions/
     ├── safety/                blocks dangerous bash patterns at the tool boundary
     ├── quality/               runs ruff/eslint on edited files; surfaces lint as context
-    └── rtk-wrap/              (existing user extension)
+    ├── budget-guard/          limits subagent scope
+    ├── pi-hashline/           hashline read & edit inspired by omp
+    ├── pi-web-access/         basic web tools
+    ├── subagent/              basic subagent support
+    ├── todo/                  tasks tools
+    └── rtk-wrap/              proxy cli bash calls
 ```
 
 
@@ -28,11 +31,6 @@ pi --agent researcher
 pi --agent architect
 ```
 
-## Extensions
-
-`settings.json` lists each local extension under `extensions[]` (absolute paths). Pi loads them at startup. Each extension is a small TypeScript module that registers tools, commands, or hooks via side-effect calls on the global `pi` object:
-
-- `pi.registerTool(...)` for tools the model can call
 - `pi.registerCommand(...)` for slash commands
 - `pi.on(event, handler)` for lifecycle hooks
 
