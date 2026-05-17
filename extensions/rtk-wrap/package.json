@@ -1,0 +1,10 @@
+{
+  "name": "rtk-wrap",
+  "version": "0.1.0",
+  "description": "Pi extension that rewrites bash tool commands through `rtk rewrite` for token-efficient output.",
+  "type": "module",
+  "main": "index.ts",
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

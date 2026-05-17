@@ -1,0 +1,8 @@
+{
+  "name": "pi-quality-extension",
+  "version": "1.0.0",
+  "description": "Runs ruff/eslint on edited files and surfaces issues as additional context.",
+  "type": "module",
+  "main": "index.ts",
+  "peerDependencies": { "@earendil-works/pi-coding-agent": "*" }
+}

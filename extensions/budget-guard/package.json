@@ -1,0 +1,10 @@
+{
+  "name": "budget-guard",
+  "version": "0.1.0",
+  "description": "Pi extension that hard-caps tool calls per subagent invocation to prevent runaway agents.",
+  "type": "module",
+  "main": "index.ts",
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "todo",
+  "version": "0.1.0",
+  "description": "Pi extension. Todo list for orchestrator/subagent task tracking; persists across /reload via branch replay.",
+  "type": "module",
+  "main": "index.ts",
+  "dependencies": {
+    "@sinclair/typebox": "^0.32.0"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "lastChangelogVersion": "0.74.0",
+  "defaultProvider": "",
+  "defaultModel": "gpt-5.4",
+  "defaultThinkingLevel": "xhigh",
+  "packages": []
+}

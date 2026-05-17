@@ -1,0 +1,13 @@
+{
+	"name": "pi-hashline",
+	"version": "0.1.0",
+	"description": "Pi extension. Routes read/edit tool calls through hashline (line-numbered + 2-char content hash anchors) for stale-edit detection.",
+	"type": "module",
+	"main": "index.ts",
+	"dependencies": {
+		"typebox": "^0.32.13"
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-coding-agent": "*"
+	}
+}

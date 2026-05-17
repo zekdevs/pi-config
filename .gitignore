@@ -1,0 +1,9 @@
+auth.json
+run-history.jsonl
+sessions/
+bin/
+.DS_Store
+extensions/*/node_modules/
+extensions/*/cache/
+extensions/*/.git/
+extensions/*/.fallow/

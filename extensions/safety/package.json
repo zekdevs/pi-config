@@ -1,0 +1,8 @@
+{
+  "name": "pi-safety-extension",
+  "version": "1.0.0",
+  "description": "Blocks dangerous bash patterns at the tool boundary.",
+  "type": "module",
+  "main": "index.ts",
+  "peerDependencies": { "@earendil-works/pi-coding-agent": "*" }
+}
