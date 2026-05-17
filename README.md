@@ -18,30 +18,12 @@ User-global pi configuration. Agents, prompts, skills, and chains for the `pi` C
     └── rtk-wrap/              (existing user extension)
 ```
 
-## Chains
-
-Chains are provided by the `pi-subagents` package (installed via `packages` in `settings.json`). Files in `chains/*.chain.md` are auto-discovered. The `{previous}` placeholder is auto-injected between steps.
-
-| Slash command | Chain |
-|---|---|
-| `/run-chain e2e -- <task>`     | researcher → planner → tester → developer → reviewer → security |
-| `/run-chain feature -- <task>` | researcher → tester → developer → reviewer → security |
-| `/run-chain spec -- <task>`    | researcher → planner |
-
-Convenience prompt entry points wrap each chain:
-
-- `/e2e <task>`
-- `/feature <task>`
-- `/spec <task>`
-
-The orchestrator agent is the **caller**, not part of any chain — its only job is dispatching via `/run-chain` (or the `subagent` tool from `pi-subagents`) and summarizing results.
 
 ## Invoking an Individual Agent
 
 Run any agent directly without a chain:
 
 ```
-pi --agent developer
 pi --agent researcher
 pi --agent architect
 ```
