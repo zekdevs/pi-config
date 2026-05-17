@@ -7,7 +7,7 @@ User-global pi configuration. Agents, prompts, skills, and chains for the `pi` C
 ```
 ~/.pi/agent/
 ├── README.md                  this file
-├── AGENTS.md                  global instructions injected into every agent
+├── APPEND_SYSTEM.md           add to system prompt
 ├── settings.json              entry point pi reads (provider, model, packages, agents)
 ├── agents/                    11 agent definitions (orchestrator + specialists)
 ├── prompts/                   slash-prompt entry points (e2e, feature, spec)
