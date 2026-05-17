@@ -12,7 +12,6 @@ User-global pi configuration. Agents, prompts, skills, and chains for the `pi` C
 ├── agents/                    11 agent definitions (orchestrator + specialists)
 ├── prompts/                   slash-prompt entry points (e2e, feature, spec)
 ├── skills/                    domain knowledge bundles (full directories)
-├── chains/                    pi-subagents chain definitions (*.chain.md)
 └── extensions/
     ├── safety/                blocks dangerous bash patterns at the tool boundary
     ├── quality/               runs ruff/eslint on edited files; surfaces lint as context
