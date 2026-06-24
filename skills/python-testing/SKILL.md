@@ -51,6 +51,49 @@ uv run -m pytest -v               # Non-uv projects
 
 ---
 
+## Imports
+
+Imports should usually be on separate lines:
+```
+# Correct:
+import os
+import sys
+
+# Correct:
+from subprocess import Popen, PIPE
+
+# Wrong:
+import sys, os
+
+# Wrong
+from subprocess import Popen
+from subprocess import PIPE
+```
+
+### General Rules
+Imports are always put at the top of the file, just after any module comments and docstrings, and before module globals and constants.
+
+Imports should be grouped in the following order, and there should be blank line between each group of imports:
+
+Standard library imports.
+Related third party imports.
+Local application/library specific imports.
+Perfer absolute imports:
+
+```
+import mypkg.sibling
+from mypkg import sibling
+from mypkg.sibling import example
+```
+Explicit relative imports are situationally ok, where using absolute imports would be unnecessarily verbose:
+
+```
+from . import sibling
+from .sibling import example
+```
+
+---
+
 ## Pytest Fixtures
 
 ### Fixture Scopes
