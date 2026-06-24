@@ -60,21 +60,6 @@ tilt up                             # Start
 tilt down                           # Stop and clean up
 ```
 
-## Running tilt up
-
-Run in tmux to survive session reloads:
-
-```bash
-SESSION=$(basename $(git rev-parse --show-toplevel 2>/dev/null) || basename $PWD)
-
-if ! tmux has-session -t "$SESSION" 2>/dev/null; then
-  tmux new-session -d -s "$SESSION" -n tilt
-  tmux send-keys -t "$SESSION:tilt" 'tilt up' Enter
-elif ! tmux list-windows -t "$SESSION" -F '#{window_name}' | grep -q "^tilt$"; then
-  tmux new-window -t "$SESSION" -n tilt
-  tmux send-keys -t "$SESSION:tilt" 'tilt up' Enter
-fi
-```
 
 ## Critical: Never Restart for Code Changes
 
